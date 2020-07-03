@@ -2,16 +2,7 @@
   style="display: flex; flex-direction: column; height: 100%; width: 100%;"
   *ngIf="!result"
 >
-  <div
-    name="title"
-    style="
-      display: flex;
-      width: 100%;
-      justify-content: center;
-      font-size: 16px;
-      align-items: center;
-    "
-  >
+  <div name="title" class="title-style">
     <div class="col-12 d-flex justify-content-center text-center">
       <h1>Pantalla de Configuración</h1>
     </div>
@@ -19,14 +10,8 @@
   <div name="body" class="body">
     <form [formGroup]="trainers" class="form-style">
       <div
-        class="form-group"
+        class="form-group form-group-style"
         *ngFor="let control of trainers.controls"
-        style="
-          display: flex;
-          width: 100%;
-          flex-direction: column;
-          border-bottom: 1px solid;
-        "
       >
         <form [formGroup]="control" style="margin-right: 1%; margin-left: 1%;">
           <label for="exampleInputEmail1"
@@ -101,8 +86,8 @@
   </div>
 </div>
 
-<mat-tab-group mat-align-tabs="start" *ngIf="result">
-  <mat-tab label="Entrenadores">
+<mat-tab-group mat-align-tabs="start" *ngIf="result" style="height: 100%;">
+  <mat-tab label="Entrenadores" style="height: 94%;">
     <div
       style="display: flex; flex-direction: column; height: 100%; width: 100%;"
     >
@@ -132,72 +117,6 @@
       </div>
 
       <div class="body-card">
-        <div class="carInfo" *ngFor="let item of resultData">
-          <div class="car-title hf-color">
-            <div>Entrenador {{ item.trainer.id }}</div>
-            <div
-              tooltip="<b>Valoración:</b> {{
-                item.trainer.reputation
-              }} <br> <b>Max clientes: </b>{{ item.trainer.available }}"
-            >
-              <i class="fas fa-info-circle"></i>
-            </div>
-          </div>
-          <div class="car-body">
-            <label>{{ item.trainer.name }}</label>
-            <div>Clientes asignados:</div>
-            <div *ngFor="let client of item.clients">
-              {{ client.name }}
-            </div>
-          </div>
-          <div class="hf-color">
-            {{ item.clients.length }} clientes asignados
-          </div>
-        </div>
-        <div class="carInfo" *ngFor="let item of resultData">
-          <div class="car-title hf-color">
-            <div>Entrenador {{ item.trainer.id }}</div>
-            <div
-              tooltip="<b>Valoración:</b> {{
-                item.trainer.reputation
-              }} <br> <b>Max clientes: </b>{{ item.trainer.available }}"
-            >
-              <i class="fas fa-info-circle"></i>
-            </div>
-          </div>
-          <div class="car-body">
-            <label>{{ item.trainer.name }}</label>
-            <div>Clientes asignados:</div>
-            <div *ngFor="let client of item.clients">
-              {{ client.name }}
-            </div>
-          </div>
-          <div class="hf-color">
-            {{ item.clients.length }} clientes asignados
-          </div>
-        </div>
-        <div class="carInfo" *ngFor="let item of resultData">
-          <div class="car-title hf-color">
-            <div>Entrenador {{ item.trainer.id }}</div>
-            <div
-              tooltip="<b>Valoración:</b> {{
-                item.trainer.reputation
-              }} <br> <b>Max clientes: </b>{{ item.trainer.available }}"
-            >
-              <i class="fas fa-info-circle"></i>
-            </div>
-          </div>
-          <div class="car-body">
-            <label>{{ item.trainer.name }}</label>
-            <div>Clientes asignados:</div>
-            <div *ngFor="let client of item.clients">
-              {{ client.name }}
-            </div>
-          </div>
-          <div class="hf-color">
-            {{ item.clients.length }} clientes asignados
-          </div>
-        </div>
         <div class="carInfo" *ngFor="let item of resultData">
           <div class="car-title hf-color">
             <div>Entrenador {{ item.trainer.id }}</div>

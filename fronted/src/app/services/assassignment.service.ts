@@ -6,7 +6,7 @@ import { Subject, BehaviorSubject } from "rxjs";
   providedIn: "root",
 })
 export class AssassignmentService {
-  url = "http://localhost:8000/";
+  url = "https://serverentrenadores.herokuapp.com/";
   constructor(private http: HttpClient) {}
   assignmentClientsToTrainers(data) {
     return this.http.post(this.url + "assignment", data);
