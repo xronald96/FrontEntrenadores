@@ -1,0 +1,56 @@
+.items {
+  align-content: center;
+  /* padding-bottom: 2%; */
+  border-bottom: 1px solid;
+  display: flex;
+  /* padding-bottom: 2%; */
+  border-bottom: 1px solid;
+  flex-direction: column;
+  width: 100%;
+  height: 77px;
+  justify-content: center;
+}
+
+.form-style {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-height: 70%;
+}
+.body-card {
+  display: flex;
+  height: 80%;
+  width: 100%;
+  overflow: hidden;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+
+.carInfo {
+  display: flex;
+  flex-direction: column;
+  width: 31%;
+  height: 30%;
+  border-radius: 5px;
+  margin: 1%;
+  border: 1px grey solid;
+  border-right: 1px grey solid;
+}
+.car-body {
+  height: 60%;
+  display: flex;
+  padding: 1%;
+  flex-direction: column;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.hf-color {
+  background-color: grey;
+  color: white;
+  height: 20%;
+  display: flex;
+  padding: 1%;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,56 @@
+<div name="body" class="body">
+  <form [formGroup]="data" class="form-style">
+    <div
+      class="form-group"
+      *ngFor="let control of data.controls"
+      style="
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        border-bottom: 1px solid;
+      "
+    >
+      <form [formGroup]="control">
+        <label for="exampleInputEmail1"
+          >Cliente {{ control.get("id").value }}</label
+        >
+        <div class="form-group row">
+          <label for="Name" class="col-sm-2 col-form-label">Nombre</label>
+          <div class="col-sm-4">
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              aria-describedby="name"
+              formControlName="name"
+            />
+          </div>
+          <label for="Name" class="col-sm-2 col-form-label"
+            >Importacia entrenador</label
+          >
+          <div class="col-sm-4">
+            <input
+              type="text"
+              class="form-control"
+              id="reputationTrainer"
+              formControlName="reputationTrainer"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+  </form>
+  <div class="row">
+    <div
+      class="text-right"
+      style="padding: 1%; display: flex; justify-content: space-evenly;"
+    >
+      <button (click)="addClient()" type="button" class="btn btn-primary">
+        Añadir cliente
+      </button>
+      <button (click)="save()" type="button" class="btn btn-primary">
+        Guardar y cerrar
+      </button>
+    </div>
+  </div>
+</div>
